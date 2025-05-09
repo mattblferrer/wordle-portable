@@ -34,9 +34,9 @@ void getColors(String guess, String solution, int (&colors)[5]) {
 
       // count number of letters to check how many YELLOWS to display
       int ctr = 0;
-      for (int k = i; k <= GUESS_LENGTH; k++) {
-        if (guess[i] != solution[k]) continue;
-        if (colors[k] != 0) ctr--;
+      for (int k = 0; k <= GUESS_LENGTH; k++) {
+        if (solution[j] != solution[k]) continue;
+        if (solution[j] == guess[k] && colors[k] != 0) ctr--;
         else ctr++;
       }
       if (ctr > 0) colors[i] = 1;
